@@ -8,6 +8,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+background-color: lightblue; /* Set body background to match main */
+}
 
 /* Geeneral styles */
 html, body {
@@ -18,9 +24,7 @@ html, body {
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
     
-    
 }   
-
 
 /* header*/
 header {
@@ -29,20 +33,25 @@ header {
     position: fixed; 
     z-index: 99;
     width: 100%;
-    box-shadow: 0 2px 2px #3a3a3a
-    
+    box-shadow: 0 2px 2px #3a3a3a;
 }    
 
+header a {
+    text-decoration: none;
+    color: #252525;
+}
+    
 h1 { 
     font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
 }
 
 /* main */
 main {
-    background-color: lightblue;
-   /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
 /* footer */
