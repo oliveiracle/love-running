@@ -18,17 +18,14 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1,
-h2,
-h3 {
+h1,h2,h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
 }
 
-/* Header */
-header {
+.hidden-heading {
     background-color: #ffffff;
     padding: 0 1rem;
     position: fixed;
@@ -162,11 +159,12 @@ main {
 
 /* Meetup Times section */
 #times {
-    background: url('../images/dublin-city.webp') no-repeat center/cover;
+    background: url("../images/dublin-city.webp") no-repeat center/cover;
     /* Handles responsivity without the need for a media query */
     display: flex;
     flex-wrap: wrap;
 }
+
 
 #times div {
     color: #fafafa;
@@ -186,6 +184,16 @@ main {
     color: #fafafa;
 }
 
+/* Gallery page */
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
+
+#photos {
+    line-height: 0;
+}
+
 /* Footer */
 #social-networks {
     text-align: center;
@@ -199,6 +207,79 @@ main {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
+
+}
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+#signup {
+    background: url("../images/signup-image.webp") no-repeat;
+    background-size: cover;
+    background-position: 75%;
+    flex-grow: 1;
+    padding: 30px 0;
+    position: relative;
+}
+
+#signup-form {
+    background-color: rgba(60, 60, 60, 0.6);
+    color: #ffffff;
+    padding: 30px;
+}
+
+#signup-form h2 {
+    color: #fafafa;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    width: 100%;
+    margin: 20px 0;
+    padding: 5px;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    background-color: transparent;
+    color: #fafafa;
+}
+
+.radio-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.radio-buttons div {
+    width: 30%;
+}
+.join-button {
+    background-color: #454b1b;
+    color: #fafafa;
+    border: none;
+    border-radius: 2px;
+    font-size: 100%;
+    padding: 15px 32px;
+    margin: 20px 0 30px;
+    cursor: pointer;
+}
+
+
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
 }
 
 /* Media query: tablets and larger (768px and up) */
@@ -231,6 +312,17 @@ main {
         margin: 0 0.5rem;
     }
 
+    #signup {
+        background-position: center;
+    }
+    
+    #signup-form {
+        max-width: 400px;
+        position: absolute;
+        left: 10%;
+        top: 150px;
+    }
+    
     /* Main content */
     main {
         /* Push main content down to accommodate larger header */
@@ -260,12 +352,22 @@ main {
         text-align: end;
         align-self: flex-end;
     }
+
+    /* Gallery */
+    #photos {
+        column-count: 3;
+    }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+
+    /* Gallery */
+    #photos {
+        column-count: 4;
     }
 }
 
@@ -295,4 +397,6 @@ main {
     #benefits-physical > div {
         align-self: flex-end;
     }
+
+   
 }

@@ -31,57 +31,80 @@
         </label>
         <nav>
             <ul id="menu">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="signup.html" class="active">Sign Up</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main content -->
     <main>
-        <section id="hero">
-            <div id="cover-text">
-                <h2>Love Running</h2>
-                <h3>Dublin Docklands & Phoenix Park</h3>
-            </div>
-        </section>
-        <section id="reasons">
-            <h2>Why love running with us?</h2>
-            <div id="benefits">
-                <div id="benefits-physical">
-                    <div>
-                        <h3>Feel healthy <i class="fa-solid fa-heart-pulse"></i></h3>
-                        <hr>
-                        <p>Since it improves aerobic fitness, running is a great way to help improve your cardiovascular
-                            health. Plus, it burns calories and can build strength.</p>
-                    </div>
-                    <div>
-                        <h3>Feel strong <i class="fa-solid fa-dumbbell"></i></h3>
-                        <hr>
-                        <p>Running strengthens your heart by pumping blood more effectively through your body.</p>
-                    </div>
+              <section id="signup">
+              <form id="signup-form"
+                    method="POST"
+                    action="https://formdump.codeinstitute.net">
+                
+               
+                <h2>
+                  <i class="fa-solid fa-heartbeat"></i>
+                  Let's get you signed up!
+                </h2>
+          
+                
+                <label for="first-name">First Name</label><br>
+                <input class="text-input"
+                       type="text"
+                       id="first-name"
+                       name="first-name"
+                       required><br>
+          
+                <label for="last-name">Last Name</label><br>
+                <input class="text-input"
+                       type="text"
+                       id="last-name"
+                       name="last-name"
+                       required><br>
+          
+                <label for="email">Email Address</label><br>
+                <input class="text-input"
+                       type="email"
+                       id="email"
+                       name="email"
+                       required><br>
+          
+                <div class="radio-buttons">
+                  <div>
+                    <input type="radio"
+                           id="pref-road"
+                           name="running-preference"
+                           value="road"
+                           checked>
+                    <label for="pref-road">Road</label>
+                  </div>
+                  <div>
+                    <input type="radio"
+                           id="pref-trail"
+                           name="running-preference"
+                           value="trail">
+                    <label for="pref-trail">Trail</label>
+                  </div>
+                  <div>
+                    <input type="radio"
+                           id="pref-both"
+                           name="running-preference"
+                           value="both">
+                    <label for="pref-both">Both</label>
+                  </div>
                 </div>
-                <div id="benefits-mental">
-                    <div>
-                        <h3>Feel free <i class="fa-brands fa-fly"></i></h3>
-                        <hr>
-                        <p>Physical exercise, running included, is known to release endorphins in the brain. Endorphins
-                            make you more energetic, more awake and, yes, happier.</p>
-                    </div>
-                    <div>
-                        <h3>Get social <i class="fa-solid fa-globe"></i></h3>
-                        <hr>
-                        <p>When we run with others, we can run farther and faster more easily. Social running can pull
-                            you out of a running funk or low mood, and inspire you to try new events.</p>
-                    </div>
-                </div>
-                <div id="benefits-image">
-                    <div id="circle-cover-bg"></div>
-                </div>
-            </div>
-        </section>
-    </main>
+          
+
+                <button type="submit" class="join-button">
+                  Let's Run!
+                </button>
+              </form>
+            </section>
+          </main>
 
     <!-- Footer -->
     <footer>
